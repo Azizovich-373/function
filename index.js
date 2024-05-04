@@ -7,14 +7,21 @@ let a = +prompt('Write A')
 let b = +prompt('Write B')
 prog(a,b)
 
-// function max(arr) {
-//     let maxy = arr[0]
-//     for (let i = 0; i < arr.length; i++) {
-//         console.log(i);
-//         if (arr[i] > maxy) {
-//             maxy = arr[i]
-//         }
-//     }
-//     return maxy
-// }
-// console.log(max(1,33,4,2,4,7,4,99,66,33,4555,2222))
+function arr_sort(arr) {
+    let sort = true 
+    while (sort === true ){
+        sort = false
+        for (let i = 0; i < arr.length; i++) {
+             if (arr[i] > arr[i+1]) {
+                  let saved = arr[i]
+                  arr[i] = arr [i+1]
+                  arr[i+1] = saved
+                  sort = true
+             }          
+        }
+   }
+
+}
+
+arr_sort(1,2,3,4,5,6)
+console.log(arr);
